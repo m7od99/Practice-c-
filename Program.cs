@@ -6,7 +6,7 @@ namespace practice_c_
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+          Console.WriteLine(Factor.IsFactor(80,150)); 
         }
     }
 }
