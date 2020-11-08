@@ -4,23 +4,18 @@ namespace practice_c_
     {
        public static bool Is_Digit(string input)
        {  
-           var count = 0;
            while (true)
            {
                foreach (var item in input)
                {
-                   if ((int)item >=48 && (int)item <=57)
+                   if ((int)item >=57 || (int)item <=48)
                    {
-                       count++;
+                       return false;
                    }
+                    else return true;
                }
-               break;
            }
-             if (count == input.Length)
-               {
-                   return true ;
-               }
-               else return false;
+          
        }
     }
 }
