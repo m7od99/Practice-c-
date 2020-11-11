@@ -8,10 +8,9 @@ namespace practice_c_
            {
                foreach (var item in input)
                {
-                   if ((int)item >=57 || (int)item <=48)
-                   {
+                   if ((int)item >58 || (int)item <47)
                        return false;
-                   }
+                   
                     else return true;
                }
            }

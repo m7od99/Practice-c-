@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+
 
 namespace practice_c_
 {
@@ -14,10 +14,15 @@ namespace practice_c_
 
           var numbers = new int[] { 4 ,5 ,1 ,2 ,10};
 
-         Console.WriteLine(Sort.Select_Number(numbers , true ,2)); // 5
-         Console.WriteLine(Sort.Select_Number(numbers , false ,1));  //1
-         Console.WriteLine(Sort.Select_Number(numbers , true ,1)); //10
-        
+          Console.WriteLine(Select.Select_Number(numbers , false , 1)); // 1
+          Console.WriteLine(Select.Select_Number(numbers , false ,2));//2
+          Console.WriteLine(Select.Select_Number(numbers , false ,3)); //4
+          Console.WriteLine(Select.Select_Number(numbers , true ,1));// 10
+          Console.WriteLine(Select.Select_Number(numbers , true ,2));// 5
+          Console.WriteLine(Select.Select_Number(numbers , true ,3));// 4
+          
+   
+
         }
     }
 }
