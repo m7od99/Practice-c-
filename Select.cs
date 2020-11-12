@@ -2,64 +2,112 @@ namespace practice_c_
 {
     public class Select
     {
-          public static int Select_Number(int[]numbers ,bool select ,int target) 
+         public static int[] Copy_Array(int[] numbers)
+        {
+
+            int[]copy = new int[numbers.Length];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                copy[i] = numbers[i];
+            }
+            return copy;
+        }
+        public static int MaxNumber(int[] numbers)
+        {
+            var cNumber = numbers[0];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] > cNumber)
+                {
+                    cNumber = numbers[i];
+                }
+            }
+            return cNumber;
+        }
+         public static int MinNumber(int[] numbers)
+        {
+            var cNumber = numbers[0];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] < cNumber)
+                {
+                    cNumber = numbers[i];
+                }
+            }
+            return cNumber;
+        }    
+        public static int Skip(int[] numbers , bool size , int target)
+        {
+            if (size == true)
+            {
+                int max = Select.MaxNumber(numbers);
+                int index = 0;
+                for (int a = 0; a < target; a++)
+                {
+                    for (int i = 0; i < numbers.Length; i++)
+                    {
+                       if (numbers[i] == max)
+                         {
+                             index = i;
+                         }
+                     }
+                     max = Select.MaxNumber(numbers);
+                }
+                
+                 return numbers[index]=0;
+            }
+            else 
+            {
+                int max = Select.MinNumber(numbers);
+                int index = 0;
+                for (int a = 0; a < target; a++)
+                {
+                     for (int i = 0; i < numbers.Length; i++)
+                    {
+                       if (numbers[i] == max)
+                         {
+                             index = i;
+                         }
+                     }
+                     max = Select.MinNumber(numbers);
+                }
+               
+                 return numbers[index]=99999995;
+            }
+            
+        }
+
+        public static int Select_Number(int[] numbers ,bool select ,int target) 
         {   
             if (select == false)
             {
-             var copyArray = new int[numbers.Length];
-
-             for (int i = 0; i < numbers.Length; i++)
-                 copyArray[i] = numbers[i];
-            
-             var index = 0;
-             var smallest = 0;
-             var cNumber = copyArray[0];
+             int[] copyArray = Select.Copy_Array(numbers);
+             var smallest =0;
 
              for (int i = 0; i < target; i++)
              {
-                 for (int a = 0; a < copyArray.Length; a++)
-                 {
-                     if (copyArray[a] < cNumber)
-                     {
-                         cNumber = numbers[a];
-                         index = a ;
-                     }
-                 }
-                 smallest = cNumber;
-                 cNumber = copyArray[0];
-                 copyArray[index] = 955555554;
-                 
+                 smallest = Select.MinNumber(copyArray); 
+                 Select.Skip(copyArray , false ,target);
              }
              return smallest;
             }
 
             else
             {
-             var copyArray = new int[numbers.Length];
-             for (int i = 0; i < numbers.Length; i++)
-                 copyArray[i] = numbers[i];
-             
-             var largest = 0;
-             var idex = 0;
-             var cNumber = copyArray[0];
+             int[] copyArray = Select.Copy_Array(numbers);
+             var largest =0;
 
              for (int i = 0; i < target; i++)
              {
-                 for (int a = 0; a < copyArray.Length; a++)
-                 {
-                     if (copyArray[a] > cNumber)
-                     {
-                         cNumber = numbers[a];
-                         idex = a ;
-                     }      
-                 }
-                 largest = cNumber;
-                 cNumber = copyArray[0];
-                 copyArray[idex] =0;
+                 largest = Select.MaxNumber(copyArray); 
+                 Select.Skip(copyArray , true ,target);
              }
-             
              return largest;
+            
             }
+
         }
-    }
-}
+   
+     }
+
+ }
