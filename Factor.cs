@@ -1,4 +1,4 @@
-//given tow numbers- program that tell if the second number is a factor of the list 
+
 
 namespace practice_c_
 {

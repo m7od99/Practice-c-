@@ -7,16 +7,16 @@ namespace practice_c_
     {
         public static int[] Get_sort(int[] numbers)
         {
-            int b = 0;
+            int smaller = 0;
             for (int i = 0; i < numbers.Length; i++)
                 {
                     for (int k = i+1; k < numbers.Length; k++)
                     {
                         if (numbers[i]> numbers[k])
                         {
-                            b = numbers[i];
+                            smaller = numbers[i];
                             numbers[i]= numbers[k];
-                            numbers[k] = b;
+                            numbers[k] = smaller;
                             
                         }
                     }

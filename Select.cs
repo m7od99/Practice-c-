@@ -2,6 +2,57 @@ namespace practice_c_
 {
     public class Select
     {
+        public static int IndexOf(int[] numbers ,int number)
+       {
+           var index = 0;
+           for (int i = 0; i < numbers.Length; i++)
+           {
+               if (numbers[i] == number)
+               {
+                   index = i ;
+               }
+           }
+           return index ;
+       }
+         public static char[] ToCharArray(string input)
+        {
+            var toChar = new char[input.Length];
+            for (int i = 0; i < input.Length; i++)
+            {
+                toChar[i] = input[i];
+            }
+            return toChar;
+        }   
+         public static string SubString(string input , int from , int to)
+       {
+           var sub = "";
+           for (int i = from; i <= to; i++)
+           {
+               sub= sub + input[i];
+           }
+           return sub;
+       }
+         public static string Longest_String(string[] input)
+       {
+           var counts = new int[input.Length];
+           for (int i = 0; i < input.Length; i++)
+           {
+                counts[i] = input[i].Length;
+           }
+    
+           var longest = Select.MaxNumber(counts);
+           var longestWord ="";
+           for (int i = 0; i < input.Length; i++)
+           {
+               if (input[i].Length == longest)
+               {
+                   longestWord = input[i];
+               }
+           }
+
+           return longestWord;
+       }
+
          public static int[] Copy_Array(int[] numbers)
         {
 
@@ -109,5 +160,4 @@ namespace practice_c_
         }
    
      }
-
  }
