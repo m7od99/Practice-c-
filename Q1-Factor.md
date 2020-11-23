@@ -1,3 +1,4 @@
+برنامج ياخذ رقمان اذا كان الثاني عامل للاول يعيد صحيح 
 
 /*
 given two numbers- program that tell if the second number is a factor of first 

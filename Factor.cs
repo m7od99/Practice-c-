@@ -6,7 +6,8 @@ namespace practice_c_
     {
         public static bool IsFactor(int first , int second)
         {
-            if (second%first ==0)
+            // if reminder = 0 return true else false .
+            if (second%first ==0) 
                 return true ;
             else return false ;
         }

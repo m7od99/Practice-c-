@@ -1,3 +1,6 @@
+برنامج ياخذ سلسلة ارقام و قيمة منطقية اذا كانت خطا فهو يبحث عن اصغر واذا كان صح يبحث عن اكبر 
+و ياخذ رقم ليحدد القيمة المستهدفه 
+
  /*
 the mathod that take three input bool and int array and int and return specific number by specific size 
 true for beggest and false for smallsest and the int for select target .

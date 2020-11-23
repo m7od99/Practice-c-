@@ -1,3 +1,4 @@
+برنامج ياخذ سلسلة ويخبرك ان كانت رقم ام لا 
 /*
 metohd that tell you if your input is digit or not .
 

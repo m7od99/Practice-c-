@@ -1,3 +1,4 @@
+برنامج ياخذ كلمتان ويرجع اطول نمط ممكن بينهما 
 The method takes two strings and returns a string represnting their longest common pattern.
 
 Input:  two strings.

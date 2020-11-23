@@ -1,3 +1,4 @@
+برنامج يقوم بترتيب سلسلة ارقام تصاعديا 
 
 method that sort int array ascending .
 
