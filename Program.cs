@@ -16,7 +16,7 @@ namespace practice_c_
           Console.WriteLine(Digit.Is_Digit("b145")); // false
           Console.WriteLine(Digit.Is_Digit("1459")); // true 
 
-          var numbers = new int[] { 4 ,5 ,1 ,2 ,10 };
+          var numbers = new int[] { 4 ,5 ,1 ,2 ,10};
 
           Console.WriteLine(Select.Select_Number(numbers , false , 1)); // 1
           Console.WriteLine(Select.Select_Number(numbers , false ,2)); //2
@@ -33,7 +33,16 @@ namespace practice_c_
           Console.WriteLine(Pattern.Get_Pattern("dddkokokdle" , "bokds"));  // okd
           Console.WriteLine(Pattern.Get_Pattern("ttd" , "dottttk")); //tt
 
-          
+          for (int i = 0; i < 100; i++)
+          {
+             Console.Write(Util.TestFactor()+ " "); // true
+          }
+          System.Console.WriteLine();
+          System.Console.WriteLine();
+          for (int i = 0; i < 1000; i++)
+          {
+             Console.Write(Util.TestSellect()+" "); // true 
+          }
 
           
         }
