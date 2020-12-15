@@ -51,40 +51,57 @@ namespace practice_c_ {
             return false;
         }
 
-        public static string RandomNumbersString()
-        {
+        public static string RandomNumbersString () {
             string alph = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             var word = "";
-            
-            for (int i = 0; i < 10; i++)
-            {
-                word = word + alph[LitterNRandom()];
+
+            for (int i = 0; i < 10; i++) {
+                word = word + alph[LitterNRandom ()];
             }
             return word;
         }
-        static int LitterNRandom() => new Random().Next(23,35);
-        static int LitterRandom() => new Random().Next(0,25);
+        static int LitterNRandom () => new Random ().Next (23, 35);
+        static int LitterRandom () => new Random ().Next (0, 26);
 
-        public static bool TestIsDigits()
-        {
-            var x = RandomNumbersString();
-            if (Digit.Is_Digit(x) == true && IsDigits(x) == false)
-            {
-                return false ;
+        public static bool TestIsDigits () {
+            var x = RandomNumbersString ();
+            if (Digit.Is_Digit (x) == true && IsDigits (x) == false) {
+                return false;
             }
             return true;
         }
 
-        public static bool IsDigits(string input)
-        {
-            foreach(var latter in input)
-            {
-                if (char.IsDigit(latter) == false)
-                {
+        public static bool IsDigits (string input) {
+            foreach (var latter in input) {
+                if (char.IsDigit (latter) == false) {
                     return false;
                 }
             }
             return true;
+        }
+
+        public static string RandomString () {
+            string alpha = " ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            var word = "";
+            for (int i = 0; i < 100; i++) {
+                word = word + alpha[LitterRandom ()];
+            }
+            return word;
+        }
+        public static bool TestIsPattern () {
+            var word = RandomString ();
+            var wordplus = RandomStringPlus (word);
+            if (Pattern.Get_Pattern (wordplus, word) == word) {
+                return true;
+            }
+            return false;
+        }
+        public static string RandomStringPlus (string input) {
+            string alpha = " ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            for (int i = 0; i < 30; i++) {
+                input = input + alpha[LitterRandom ()];
+            }
+            return input;
         }
 
     }
